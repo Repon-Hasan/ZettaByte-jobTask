@@ -26,7 +26,7 @@ export default function SidebarClient({ session }: SidebarClientProps) {
   const [collapsed, setCollapsed] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
-
+console.log("user",session)
   const menuItems = [
     { href: '/', label: 'Home', icon: <Home size={20} /> },
     { href: '/posts', label: 'Posts', icon: <FileText size={20} /> },
@@ -87,7 +87,7 @@ export default function SidebarClient({ session }: SidebarClientProps) {
         <h2 className="text-lg text-black font-semibold">Dashboard</h2>
         <button
           onClick={() => setMobileOpen(true)}
-          className="p-2 rounded hover:bg-slate-100 transition"
+          className="p-2 rounded hover:bg-slate-100 text-black transition"
         >
           <Menu size={24} />
         </button>
@@ -107,7 +107,7 @@ export default function SidebarClient({ session }: SidebarClientProps) {
           <button
             aria-label="Toggle sidebar"
             onClick={() => setCollapsed(!collapsed)}
-            className="p-2 rounded hover:bg-slate-100 transition"
+            className="p-2 rounded text-black hover:bg-slate-100 transition"
           >
             {collapsed ? '➡' : '⬅'}
           </button>
@@ -178,7 +178,7 @@ export default function SidebarClient({ session }: SidebarClientProps) {
             
               <button
                 onClick={() => setMobileOpen(false)}
-                className="p-2 rounded hover:bg-slate-100 transition"
+                className="p-2 rounded text-black hover:bg-slate-100 transition"
               >
                 <X size={24} />
               </button>
