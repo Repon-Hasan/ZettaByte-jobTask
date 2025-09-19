@@ -33,7 +33,7 @@ export default function HomePage() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-slate-700 text-lg md:text-xl"
         >
-          Welcome back! Here's a quick overview of your stats.
+          {`Welcome back! Here's a quick overview of your stats.`}
         </motion.p>
       </motion.div>
 

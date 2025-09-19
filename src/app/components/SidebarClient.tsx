@@ -16,9 +16,10 @@ import {
 } from 'lucide-react';
 import { signOut } from 'next-auth/react';
 import Swal from 'sweetalert2';
+import type { Session } from 'next-auth';
 
 interface SidebarClientProps {
-  session: any;
+  session: Session | null;
 }
 
 export default function SidebarClient({ session }: SidebarClientProps) {
@@ -139,7 +140,7 @@ export default function SidebarClient({ session }: SidebarClientProps) {
                 <li>
                   <button
                     onClick={handleLogout}
-                    className="w-full text-left block p-3 rounded hover:bg-slate-100 flex items-center gap-3 text-gray-700"
+                    className="w-full text-left p-3 rounded hover:bg-slate-100 flex items-center gap-3 text-gray-700"
                   >
                     <LogOut size={20} />
                     {!collapsed && <span>Logout</span>}
