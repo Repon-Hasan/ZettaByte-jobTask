@@ -28,7 +28,7 @@ transition={{ type: 'spring', stiffness: 300, damping: 30 }}
 className="bg-white rounded-lg p-6 shadow-lg w-[min(90%,720px)]"
 >
 <div className="flex justify-end">
-<button onClick={onClose} className="text-slate-500">Close</button>
+<button onClick={onClose} className="text-black">Close</button>
 </div>
 <div className="mt-2">{children}</div>
 </motion.div>

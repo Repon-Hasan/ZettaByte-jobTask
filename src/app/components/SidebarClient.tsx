@@ -159,7 +159,7 @@ export default function SidebarClient({ session }: SidebarClientProps) {
         </nav>
 
         {/* Footer */}
-        <div className="p-4 text-sm text-slate-500 border-t">v1.0.0</div>
+        <div className="p-4 text-sm text-black border-t">v1.0.0</div>
       </motion.aside>
 
       {/* Mobile Sidebar */}
@@ -237,7 +237,7 @@ export default function SidebarClient({ session }: SidebarClientProps) {
             </nav>
 
             {/* Footer */}
-            <div className="p-4 text-sm text-slate-500 border-t">v1.0.0</div>
+            <div className="p-4 text-sm text-black border-t">v1.0.0</div>
           </motion.aside>
         )}
       </AnimatePresence>

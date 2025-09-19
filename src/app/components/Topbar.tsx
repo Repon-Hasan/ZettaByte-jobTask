@@ -11,7 +11,7 @@ export default function Topbar() {
       </div>
 
       {/* Right side */}
-      <div className="hidden sm:block text-sm text-slate-500">
+      <div className="hidden sm:block text-sm text-black">
         Dashboard
       </div>
 

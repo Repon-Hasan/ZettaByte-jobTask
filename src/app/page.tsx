@@ -49,7 +49,7 @@ export default function HomePage() {
           className="h-64"
         >
           <Card title="Welcome" className="h-full flex flex-col justify-center items-start">
-            <p className="text-sm text-slate-600">
+            <p className="text-sm text-black">
               This is a mini dashboard UI test. Focus on clean structure, reusability, and animations.
             </p>
           </Card>
@@ -72,7 +72,7 @@ export default function HomePage() {
             >
               $12,345
             </motion.div>
-            <div className="text-sm text-slate-500 mt-2">Compared to last month</div>
+            <div className="text-sm text-black mt-2">Compared to last month</div>
           </Card>
         </motion.div>
 
@@ -93,7 +93,7 @@ export default function HomePage() {
             >
               1,245
             </motion.div>
-            <div className="text-sm text-slate-500 mt-2">Currently active</div>
+            <div className="text-sm text-black mt-2">Currently active</div>
           </Card>
         </motion.div>
       </div>
