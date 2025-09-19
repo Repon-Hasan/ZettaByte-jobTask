@@ -1,9 +1,9 @@
 'use client'
 import React, { useState } from 'react'
-import { Menu } from 'lucide-react' // ✅ hamburger icon
+
 
 export default function Topbar() {
-  const [menuOpen, setMenuOpen] = useState(false)
+  
 
   return (
     <header className="flex items-center justify-between p-[22px] border-b bg-white">
