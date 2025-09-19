@@ -20,7 +20,7 @@ export default function PostsPage() {
 
   if (loading)
     return (
-      <div className="flex justify-center items-center h-[60vh] text-slate-600">
+      <div className="flex justify-center items-center h-[60vh] text-black">
         Loading posts...
       </div>
     );
@@ -34,7 +34,7 @@ export default function PostsPage() {
 
   if (!posts || posts.length === 0)
     return (
-      <div className="flex justify-center items-center h-[60vh] text-slate-600">
+      <div className="flex justify-center items-center h-[60vh] text-black">
         No posts available.
       </div>
     );
@@ -83,9 +83,9 @@ export default function PostsPage() {
             <Link href={`/posts/${post.id}`}>
               <Card
                 title={post.title}
-                className="h-48 overflow-hidden flex flex-col justify-between bg-white shadow hover:shadow-lg transition rounded-lg p-4"
+                className="h-48 overflow-hidden flex flex-col justify-between text-black bg-white shadow hover:shadow-lg transition rounded-lg p-4"
               >
-                <p className="text-sm text-slate-600 line-clamp-3">{post.body}</p>
+                <p className="text-sm text-black line-clamp-3">{post.body}</p>
                 <span className="text-xs text-indigo-500 mt-2 hover:underline">
                   Read more →
                 </span>

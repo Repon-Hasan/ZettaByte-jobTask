@@ -31,7 +31,7 @@ export default function HomePage() {
           initial={{ x: 50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-slate-700 text-lg md:text-xl"
+          className=" text-lg md:text-xl text-blue-500"
         >
           {`Welcome back! Here's a quick overview of your stats.`}
         </motion.p>
@@ -48,7 +48,7 @@ export default function HomePage() {
           transition={{ duration: 0.5 }}
           className="h-64"
         >
-          <Card title="Welcome" className="h-full flex flex-col justify-center items-start">
+          <Card title="Welcome" className="text-black h-full flex flex-col justify-center items-start">
             <p className="text-sm text-black">
               This is a mini dashboard UI test. Focus on clean structure, reusability, and animations.
             </p>
@@ -64,11 +64,11 @@ export default function HomePage() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="h-64"
         >
-          <Card title="Revenue (This Month)" className="h-full flex flex-col justify-center items-start">
+          <Card title="Revenue (This Month)" className="h-full text-black flex flex-col justify-center items-start">
             <motion.div
               animate={{ scale: [1, 1.05, 1] }}
               transition={{ repeat: Infinity, duration: 2 }}
-              className="text-3xl md:text-4xl font-bold"
+              className="text-3xl md:text-4xl font-bold text-black"
             >
               $12,345
             </motion.div>
@@ -85,11 +85,11 @@ export default function HomePage() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="h-64"
         >
-          <Card title="Active Users" className="h-full flex flex-col justify-center items-start">
+          <Card title="Active Users" className="h-full text-black flex flex-col justify-center items-start">
             <motion.div
               animate={{ x: [0, 5, -5, 0] }}
               transition={{ repeat: Infinity, duration: 1.5 }}
-              className="text-3xl md:text-4xl font-bold"
+              className="text-3xl text-black md:text-4xl font-bold"
             >
               1,245
             </motion.div>
@@ -108,8 +108,8 @@ export default function HomePage() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="h-48"
         >
-          <Card title="Quick Links" className="h-full flex flex-col justify-center items-start">
-            <ul className="text-sm space-y-2">
+          <Card title="Quick Links" className="h-full text-black flex flex-col justify-center items-start">
+            <ul className="text-sm space-y-2 text-black">
               <li>• Go to Posts page</li>
               <li>• Go to Users page</li>
               <li>• Use error button to test API failure</li>

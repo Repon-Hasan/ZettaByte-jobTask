@@ -84,7 +84,7 @@ export default function SidebarClient({ session }: SidebarClientProps) {
     <>
       {/* Mobile Top Bar */}
       <div className="lg:hidden flex justify-between items-center p-4 border-b bg-white fixed top-0 left-0 right-0 z-40">
-        <h2 className="text-lg font-semibold">Dashboard</h2>
+        <h2 className="text-lg text-black font-semibold">Dashboard</h2>
         <button
           onClick={() => setMobileOpen(true)}
           className="p-2 rounded hover:bg-slate-100 transition"
@@ -102,7 +102,7 @@ export default function SidebarClient({ session }: SidebarClientProps) {
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b">
           {!collapsed && (
-            <h2 className="text-lg font-semibold">Mini Dashboard</h2>
+            <h2 className="text-lg text-black font-semibold">Mini Dashboard</h2>
           )}
           <button
             aria-label="Toggle sidebar"
@@ -174,7 +174,8 @@ export default function SidebarClient({ session }: SidebarClientProps) {
           >
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b">
-              <h2 className="text-lg font-semibold">Mini Dashboard</h2>
+              <h2 className="text-lg text-blue-500 font-semibold">Mini Dashboard</h2>
+            
               <button
                 onClick={() => setMobileOpen(false)}
                 className="p-2 rounded hover:bg-slate-100 transition"
@@ -214,7 +215,7 @@ export default function SidebarClient({ session }: SidebarClientProps) {
                     <li>
                       <button
                         onClick={handleLogout}
-                        className="w-full text-left block p-3 rounded hover:bg-slate-100 flex items-center gap-3 text-gray-700"
+                        className="w-full text-left p-3 rounded hover:bg-slate-100 flex items-center gap-3 text-gray-700"
                       >
                         <LogOut size={20} />
                         <span>Logout</span>

@@ -21,7 +21,7 @@ export default function PostDetail() {
 
   if (loading)
     return (
-      <div className="flex justify-center items-center h-[60vh] text-slate-600">
+      <div className="flex justify-center items-center h-[60vh] text-black">
         Loading post...
       </div>
     );
@@ -35,7 +35,7 @@ export default function PostDetail() {
 
   if (!post)
     return (
-      <div className="flex justify-center items-center h-[60vh] text-slate-600">
+      <div className="flex justify-center items-center h-[60vh] text-black">
         Post not found.
       </div>
     );
@@ -52,7 +52,7 @@ export default function PostDetail() {
         >
           <Card
             title={post.title}
-            className="h-auto bg-white shadow-md rounded-lg p-6 transition hover:shadow-lg"
+            className="h-auto bg-white shadow-md text-black rounded-lg p-6 transition hover:shadow-lg"
           >
             <p className="text-slate-700 text-base leading-relaxed">{post.body}</p>
           </Card>

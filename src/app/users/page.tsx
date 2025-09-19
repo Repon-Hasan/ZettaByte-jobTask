@@ -29,7 +29,7 @@ export default function UsersPage() {
 
   if (loading)
     return (
-      <div className="flex justify-center items-center h-[60vh] text-slate-600">
+      <div className="flex justify-center items-center h-[60vh] text-black">
         Loading users...
       </div>
     );
