@@ -98,14 +98,7 @@ export default function ProfileCard({ session }: ProfileCardProps) {
             </motion.div>
 
             {/* Logout Button */}
-            <motion.button
-              onClick={handleLogout}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="mt-4 px-6 py-2 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700 transition"
-            >
-              Logout
-            </motion.button>
+          
           </motion.div>
         ) : (
           <motion.p
