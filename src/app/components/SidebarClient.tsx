@@ -149,7 +149,7 @@ console.log("user",session)
               </>
             ) : (
               <li>
-                <Link href="/api/auth/signin" className={getLinkClasses('/login')}>
+                <Link href="/api/auth/signin" className={getLinkClasses('/api/auth/signin')}>
                   <LogIn size={20} />
                   {!collapsed && <span>Login</span>}
                 </Link>
@@ -227,7 +227,7 @@ console.log("user",session)
                     <Link
                       href="/api/auth/signin"
                       onClick={() => setMobileOpen(false)}
-                      className={getLinkClasses('/login')}
+                      className={getLinkClasses('/api/auth/signin')}
                     >
                       <LogIn size={20} />
                       <span>Login</span>
