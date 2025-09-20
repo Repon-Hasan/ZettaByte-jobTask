@@ -1,26 +1,30 @@
 'use client'
-import React, { useTransition } from 'react'
-import { FcGoogle } from 'react-icons/fc'
-import { motion } from 'framer-motion'
-import { signIn } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
-import { toast } from 'react-hot-toast'
 
-export default function LoginForm() {
+import React, { FormEvent, JSX, useTransition } from "react"
+import { FcGoogle } from "react-icons/fc"
+import { signIn, SignInResponse } from "next-auth/react"
+import { motion } from "framer-motion"
+import { toast } from "react-hot-toast"
+
+export default function LoginPage(): JSX.Element {
   const [isPending, startTransition] = useTransition()
-  const router = useRouter()
 
-  const handleGoogleLogin = async (e: React.FormEvent) => {
+  const handleGoogleLogin = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault()
 
     startTransition(async () => {
-      const result = await signIn("google", { redirect: false })
+      // Ensure redirect is false to get the response object
+      const result: SignInResponse | undefined = await signIn("google", { redirect: false })
 
-      if (result?.ok) {
-        toast.success("Login successful 🎉")
-        router.push("/")
+      if (!result?.ok) {
+        // result?.error might be undefined, so fallback to a generic message
+        toast.error(result?.error ?? "Login failed. Try again!")
       } else {
-        toast.error("Login failed. Try again!")
+        toast.success("Login successful 🎉")
+        // Optional: redirect manually
+        if (result.url) {
+          window.location.href = result.url
+        }
       }
     })
   }
@@ -32,18 +36,12 @@ export default function LoginForm() {
         className="bg-white p-6 sm:p-8 rounded-xl shadow-lg w-full max-w-sm"
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, ease: 'easeInOut' }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
       >
-        <motion.h2
-          className="text-xl sm:text-2xl font-bold text-gray-700 text-center mb-6"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-        >
+        <h2 className="text-xl sm:text-2xl font-bold text-gray-700 text-center mb-6">
           Welcome Back 👋
-        </motion.h2>
+        </h2>
 
-        {/* Google Login Button */}
         <motion.button
           type="submit"
           disabled={isPending}
